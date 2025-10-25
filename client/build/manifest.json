@@ -1,0 +1,15 @@
+{
+  "short_name": "Merch Store",
+  "name": "Merch Store - Buy our awesome merchandises",
+  "icons": [
+    {
+      "src": "merchStoreIcon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
