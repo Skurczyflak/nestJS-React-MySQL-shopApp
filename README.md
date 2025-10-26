@@ -16,6 +16,12 @@ This is a simple shop application. The main function of this app is to:
 - MySQL,
 - react-slick,
 
+## Links
+
+Last Commit: https://github.com/Skurczyflak/nestJS-React-MySQL-shopApp/commit/7bdfa56b030d084ad1f32f3b6e2843e4edc1b901
+
+Live Demo: https://nestjs-react-mysql-shopapp.onrender.com/
+
 ## Project setup
 
 ```bash
