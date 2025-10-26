@@ -37,7 +37,6 @@ export class CreateOrderDTO {
     address: string;
 
     @IsNotEmpty()
-    @IsInt()
     total: number
 
     @IsOptional()

@@ -7,15 +7,9 @@ import { UsersModule } from './users/users.module';
 import { CartItemsModule } from './cart-items/cart-items.module';
 import { CartsModule } from './carts/carts.module';
 import { OrdersModule } from './orders/orders.module';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { join } from 'path';
-
-console.log(join(__dirname, '../../', 'dist', 'public'));
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({ rootPath: join(__dirname, '../../', 'client', 'build'), serveRoot: '/' }),
-    ServeStaticModule.forRoot({ rootPath: join(__dirname, '../../', 'dist', 'public'), serveRoot: '/public' }),
       ProductsModule, 
       UsersModule, 
       CartItemsModule, 
