@@ -22,6 +22,12 @@ export class OrdersService {
         });
     }
 
+    public getByUserId(userId: Order['userId']): Promise<Order[]> {
+        return this.prismaService.order.findMany({
+            where: { userId },
+        });
+    }
+
     public async create(orderData: Omit<Order, 'id' | 'createdAt' | 'updatedAt'>): Promise<Order> {
     const { userId, items, ...otherData } = orderData;
         try{

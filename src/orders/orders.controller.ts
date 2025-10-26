@@ -22,6 +22,15 @@ export class OrdersController {
         return order;
     }
 
+    @Get('/user/:userId')
+    async getByUserId(@Param('userId', new ParseUUIDPipe()) userId: string) {
+        const order = await this.ordersService.getByUserId(userId);
+        if(!order) {
+            throw new NotFoundException();
+        }
+        return order;
+    }
+
     @Delete('/:id')
     async deleteById(@Param('id', new ParseUUIDPipe()) id: string) {
         if(!await this.ordersService.getById(id)) {
