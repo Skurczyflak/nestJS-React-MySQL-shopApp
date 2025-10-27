@@ -50,9 +50,9 @@ Aby uruchomić aplikację lokalnie, wykonaj poniższe kroki:
   npm run start:prod
   ```
 
-5. Po uruchomieniu backendu i frontendu, aplikacja będzie dostępna lokalnie pod adresem:
+5. Po uruchomieniu, aplikacja będzie dostępna lokalnie pod adresem:
    
-http://localhost:8000
+http://localhost:PORT
 
 ## Dodatkowe informacje techniczne
 
@@ -65,8 +65,19 @@ Do uruchomienia aplikacji lokalnie wystarczy skonfigurować własną bazę danyc
   DATABASE_URL="mysql://username:haslo@link:PORT/nazwa-twojej-bazy"
   PORT=TWÓJ-PROT // np 8000
 ```
+Oraz utworzyć klient prismy i stworzyć podstawową strukturę w bazie danych
+```bash
+# tworzy klienta Prisma
+npx prisma generate
+
+# tworzy tabele w bazie zgodnie z modelem   
+npx prisma db push
+```
+
 Aplikacja nie wymaga zewnętrznego API ani dodatkowej autoryzacji. 
 Wszystkie dane o produktach i zamówieniach są przechowywane lokalnie w bazie.
+
+
 
 ## Testowanie projektu
   ```bash
